@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="4" name="pytest" skips="0" tests="4" time="0.033"><testcase classname="test_report.TestCase" file="test_report.py" line="3" name="test_eq_set" time="0.0105299949646"><failure message="assert set([0, 10, 11, 12]) == set([0, 20, 21])
+  Extra items in the left set:
+  10
+  11
+  12
+  Extra items in the right set:
+  20
+  21
+  Use -v to get the full diff">self = &lt;test_report.TestCase object at 0x10aede610&gt;
+
+    def test_eq_set(self):
+&gt;       assert set([0, 10, 11, 12]) == set([0, 20, 21])
+E       assert set([0, 10, 11, 12]) == set([0, 20, 21])
+E         Extra items in the left set:
+E         10
+E         11
+E         12
+E         Extra items in the right set:
+E         20
+E         21
+E         Use -v to get the full diff
+
+test_report.py:5: AssertionError</failure></testcase><testcase classname="test_report.TestCase" file="test_report.py" line="6" name="test_eq_dict" time="0.000892877578735"><failure message="assert {&apos;a&apos;: 0, &apos;b&apos;: 1, &apos;c&apos;: 0} == {&apos;a&apos;: 0, &apos;b&apos;: 2, &apos;d&apos;: 0}
+  Omitting 1 identical items, use -v to show
+  Differing items:
+  {&apos;b&apos;: 1} != {&apos;b&apos;: 2}
+  Left contains more items:
+  {&apos;c&apos;: 0}
+  Right contains more items:
+  {&apos;d&apos;: 0}
+  Use -v to get the full diff">self = &lt;test_report.TestCase object at 0x10af1ad90&gt;
+
+    def test_eq_dict(self):
+&gt;       assert {&apos;a&apos;: 0, &apos;b&apos;: 1, &apos;c&apos;: 0} == {&apos;a&apos;: 0, &apos;b&apos;: 2, &apos;d&apos;: 0}
+E       assert {&apos;a&apos;: 0, &apos;b&apos;: 1, &apos;c&apos;: 0} == {&apos;a&apos;: 0, &apos;b&apos;: 2, &apos;d&apos;: 0}
+E         Omitting 1 identical items, use -v to show
+E         Differing items:
+E         {&apos;b&apos;: 1} != {&apos;b&apos;: 2}
+E         Left contains more items:
+E         {&apos;c&apos;: 0}
+E         Right contains more items:
+E         {&apos;d&apos;: 0}
+E         Use -v to get the full diff
+
+test_report.py:8: AssertionError</failure></testcase><testcase classname="test_report.TestCase" file="test_report.py" line="9" name="test_eq_list" time="0.000709056854248"><failure message="assert [0, 1, 2] == [0, 1, 3]
+  At index 2 diff: 2 != 3
+  Use -v to get the full diff">self = &lt;test_report.TestCase object at 0x10af2e250&gt;
+
+    def test_eq_list(self):
+&gt;       assert [0, 1, 2] == [0, 1, 3]
+E       assert [0, 1, 2] == [0, 1, 3]
+E         At index 2 diff: 2 != 3
+E         Use -v to get the full diff
+
+test_report.py:11: AssertionError</failure></testcase><testcase classname="test_report.TestCase" file="test_report.py" line="12" name="test_eq_longer_list" time="0.000792026519775"><failure message="assert [1, 2] == [1, 2, 3]
+  Right contains more items, first extra item: 3
+  Use -v to get the full diff">self = &lt;test_report.TestCase object at 0x10af2e850&gt;
+
+    def test_eq_longer_list(self):
+&gt;       assert [1,2] == [1,2,3]
+E       assert [1, 2] == [1, 2, 3]
+E         Right contains more items, first extra item: 3
+E         Use -v to get the full diff
+
+test_report.py:14: AssertionError</failure></testcase></testsuite>
