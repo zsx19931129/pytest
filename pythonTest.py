@@ -1,4 +1,10 @@
-a = '/a/b/c/'
-b = 'data.pickle'
+import os.path
+import sys
 
-print a.join(b)
+curr_path = os.getcwd()
+
+print curr_path
+
+ini_path = os.path.join(curr_path, "pytest.ini")
+
+print ini_path
